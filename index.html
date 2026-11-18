@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cadence Zhang: marketing analytics, ads and commercial portfolio. NUS MSc Marketing Analytics & Insights, Singapore.">
+<title>Cadence Zhang Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Plan: a studio-grey spec sheet. Header reads like a document title block; the work is a wall of
+   slide-style cards (dark / white / cobalt, one yellow) that re-arranges in 3D: Flat, Tilt, Ring.
+   Everything else opens in a side panel. Single light theme by choice. */
+:root{
+  --bg:#E7E8EA; --bg2:#F3F3F4; --ink:#0E0F12; --muted:#6A6E77; --line:#C6C9CF;
+  --blue:#2747D0; --yellow:#F2D307; --dark:#141518; --white:#FBFBFC;
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --cw:304px; --ch:200px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:linear-gradient(180deg,var(--bg2),var(--bg) 60%);background-attachment:fixed;color:var(--ink);font:15px/1.55 var(--sans);font-stretch:100%}
+a{color:var(--blue)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+
+/* title block */
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+header.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+header .id{display:flex;gap:10px;align-items:center}
+header .dot{width:9px;height:9px;background:var(--blue);border-radius:50%;box-shadow:12px 0 0 var(--yellow)}
+header .id span{margin-left:14px}
+nav.links{display:flex;gap:6px;flex-wrap:wrap}
+.pill{border:1px solid var(--ink);background:transparent;border-radius:999px;padding:5px 14px;cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.pill:hover{background:var(--ink);color:var(--white)}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--white)}
+
+.intro{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;padding:56px 0 40px;align-items:end;border-bottom:1px solid var(--line)}
+.intro h1{margin:0;font-weight:750;font-stretch:118%;font-size:clamp(46px,7.6vw,112px);line-height:.9;letter-spacing:-.035em;text-wrap:balance}
+.intro h1 .b{color:var(--blue)}
+.intro p{margin:18px 0 0;max-width:52ch;color:var(--muted);font-size:17px}
+.me{display:flex;flex-direction:column;gap:6px}
+.avatar{width:min(240px,60%);height:auto;align-self:flex-end;margin:-24px -6px -18px 0;filter:drop-shadow(0 14px 20px rgba(14,15,18,.12))}
+.spec{display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--ink)}
+.spec dt,.spec dd{margin:0;padding:9px 0;border-bottom:1px solid var(--line)}
+.spec dt{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-right:24px}
+.spec dd{font-weight:500}
+
+/* cover */
+.cover{min-height:calc(100svh - 70px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 0 28px;border-bottom:1px solid var(--line);position:relative}
+.face{position:relative;border:0;background:none;padding:0;cursor:pointer;width:min(540px,82vw,58svh);perspective:900px}
+.head{display:block;position:relative;transform-style:preserve-3d;will-change:transform}
+.head .base{display:block;width:100%;height:auto;filter:drop-shadow(0 26px 30px rgba(14,15,18,.14))}
+.eyeclip{position:absolute;inset:0;clip-path:ellipse(6.4% 5.3% at 34.22% 53.21%);pointer-events:none}
+.iris{position:absolute;left:30.26%;top:46.54%;width:11.28%;height:auto;will-change:transform}
+.hint{position:absolute;right:4%;top:14%;background:var(--ink);color:var(--white);padding:5px 11px;border-radius:999px;transform:rotate(6deg)}
+.face:hover .hint{background:var(--blue)}
+.name{margin:6px 0 0;font-weight:750;font-stretch:118%;font-size:clamp(44px,7.2vw,104px);line-height:.9;letter-spacing:-.035em}
+.contact{display:flex;gap:10px 14px;flex-wrap:wrap;justify-content:center;margin-top:18px;font-size:16px;color:var(--muted)}
+.contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.contact a:hover{border-color:var(--ink)}
+.down{margin-top:34px;color:var(--muted);text-decoration:none}
+.down:hover{color:var(--ink)}
+dialog.pop{border:0;padding:0;border-radius:16px;width:min(680px,94vw);background:var(--white);color:var(--ink);box-shadow:0 40px 90px -30px rgba(14,15,18,.5)}
+dialog.pop::backdrop{background:rgba(14,15,18,.3);backdrop-filter:blur(4px)}
+dialog.pop:focus{outline:none}
+.pop-in{padding:6px 30px 30px}
+.pop-in h2{margin:0;font-weight:750;font-stretch:118%;font-size:clamp(36px,6vw,58px);line-height:.92;letter-spacing:-.035em}
+.intro-p{color:var(--muted);font-size:17px;margin:16px 0 20px;max-width:56ch}
+.pop-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.pop-actions .go{margin:0;background:transparent;cursor:pointer;font-size:14px}
+.pop-actions .go.dark{background:var(--ink);color:var(--white)}
+@media (prefers-reduced-motion: no-preference){
+  dialog.pop[open]{animation:popin .35s cubic-bezier(.22,1.2,.36,1)}
+  @keyframes popin{from{transform:translateY(16px) scale(.96);opacity:0}}
+}
+
+/* works stage */
+.works-head{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:22px 0 0}
+.works-head .l{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.chipset{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:4px 11px;cursor:pointer;font-size:13px}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--white)}
+.chip .n{font-family:var(--mono);font-size:11px;opacity:.6;margin-left:5px}
+.modes{display:flex;gap:6px}
+
+.stage{position:relative;height:640px;perspective:1700px;perspective-origin:50% 50%;overflow:hidden;touch-action:pan-y;transition:height .6s ease}
+.stage.ring{cursor:grab}.stage.ring.dragging{cursor:grabbing}
+.world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.22,.8,.2,1)}
+.world.live{transition:none}
+.card{position:absolute;left:calc(var(--cw) / -2);top:calc(var(--ch) / -2);width:var(--cw);height:var(--ch);
+  display:flex;flex-direction:column;padding:12px 14px;border:0;border-radius:10px;text-align:left;cursor:pointer;
+  background:var(--white);color:var(--ink);box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -18px rgba(14,15,18,.35);
+  transition:transform .9s cubic-bezier(.22,.8,.2,1),opacity .45s ease,box-shadow .3s ease;transform-style:preserve-3d;backface-visibility:hidden}
+.card.v-dark{background:var(--dark);color:var(--white)}
+.card.v-blue{background:var(--blue);color:var(--white)}
+.card.v-yellow{background:var(--yellow)}
+.card .top,.card .foot{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;opacity:.75}
+.card .big{margin-top:auto;font-weight:750;font-stretch:125%;font-size:46px;line-height:.9;letter-spacing:-.03em}
+.card .bl{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;opacity:.7;margin-top:4px}
+.card .t{font-weight:600;font-size:14px;line-height:1.25;margin:8px 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;padding-top:8px;border-top:1px solid currentColor;border-top-color:color-mix(in srgb,currentColor 25%,transparent)}
+.card .st{padding:1px 6px;border:1px solid currentColor;border-radius:3px;flex:none}
+.card .foot > span:first-child,.card .top > span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card .bl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card.todo .st{opacity:1}
+.card:hover{box-shadow:0 1px 0 rgba(0,0,0,.04),0 28px 60px -20px rgba(14,15,18,.55)}
+.card.off{opacity:0;pointer-events:none}
+.stage-foot{display:flex;justify-content:space-between;padding:10px 0 28px;border-bottom:1px solid var(--line);color:var(--muted)}
+.draftbtn{border:1px dashed #A06A00;color:#A06A00;background:transparent;border-radius:999px;padding:3px 10px;cursor:pointer}
+body.recruiter .draftbtn{border-color:var(--muted);color:var(--muted)}
+
+/* section index under the stage */
+.index{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:28px 0 64px}
+.ix{display:flex;flex-direction:column;justify-content:flex-start;border-top:1px solid var(--ink);padding:14px 16px 0 0;cursor:pointer;background:none;border-left:0;border-right:0;border-bottom:0;text-align:left}
+.ix .k{color:var(--muted)}
+.ixl{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:10px;font-size:14px;color:var(--ink);line-height:1.4}
+.ixl li .mono{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.ixl li b{font-weight:600}
+.ixl li.more{color:var(--muted)}
+.ix h2{margin:6px 0 4px;font-weight:700;font-stretch:112%;font-size:26px;letter-spacing:-.02em}
+.ix p{margin:0;color:var(--muted);font-size:14px}
+.ix:hover h2{color:var(--blue)}
+footer{padding:0 0 40px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* side panels */
+dialog.sheet{margin:0 0 0 auto;height:100%;max-height:100%;width:min(620px,100vw);border:0;padding:0;background:var(--white);color:var(--ink);
+  box-shadow:-30px 0 60px -30px rgba(14,15,18,.45)}
+dialog.sheet:focus{outline:none}
+dialog.sheet::backdrop{background:rgba(14,15,18,.28);backdrop-filter:blur(3px)}
+dialog.sheet[open]{display:flex;flex-direction:column}
+.sh-head{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid var(--line)}
+.x{border:1px solid var(--ink);background:transparent;border-radius:999px;padding:5px 12px;cursor:pointer}
+.x:hover{background:var(--ink);color:var(--white)}
+.sh-body{padding:26px 28px 40px;overflow:auto}
+.sh-body h2{margin:0 0 4px;font-weight:750;font-stretch:115%;font-size:38px;letter-spacing:-.03em;line-height:1}
+.sh-body .lede{color:var(--muted);margin:6px 0 22px}
+.row{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row .when{color:var(--muted);padding-top:3px}
+.row h3{margin:0;font-size:17px;font-weight:650}
+.row .role{color:var(--muted);font-size:14px;margin-top:1px}
+.row ul{margin:10px 0 0;padding-left:18px}
+.row li{margin:5px 0;font-size:14.5px}
+.row li b{font-weight:600}
+.kv{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.kv span{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--line);border-radius:4px;padding:2px 7px}
+.kv span.hl{border-color:var(--ink);background:var(--yellow)}
+.detail-big{font-weight:750;font-stretch:125%;font-size:84px;line-height:.85;letter-spacing:-.04em;color:var(--blue)}
+.dl{display:grid;grid-template-columns:110px 1fr;gap:10px 18px;margin:20px 0 0;padding:0}
+.dl dt{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:3px}
+.dl dd{margin:0}
+.todo-box{margin-top:20px;border:1px dashed #A06A00;color:#7A5200;background:#FFF8DA;border-radius:8px;padding:10px 14px;font-size:14px}
+body.recruiter .todo-box{display:none}
+.funnel{margin-top:18px;display:grid;gap:8px}
+.funnel .r{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center;font-size:13px}
+.funnel .tr{display:flex;align-items:center;gap:8px}
+.funnel .bb{height:16px;background:var(--blue);min-width:3px;border-radius:2px}
+.funnel b{font-family:var(--mono);font-weight:500;font-size:12.5px}
+.go{display:inline-block;margin-top:20px;border:1px solid var(--ink);border-radius:999px;padding:7px 16px;text-decoration:none;color:var(--ink);font-weight:600}
+.go:hover{background:var(--ink);color:var(--white)}
+.tt-h{margin:26px 0 8px;color:var(--blue)}
+.tt-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0}
+.tt-table th{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;border-bottom:1px solid var(--ink);padding:6px 8px 6px 0}
+.tt-table td{border-bottom:1px solid var(--line);padding:8px 8px 8px 0;vertical-align:top}
+.tt-table td:first-child{font-weight:600;width:28%}
+.tt-note{font-size:13px;color:#7A5200;background:#FFF8DA;border:1px dashed #A06A00;border-radius:8px;padding:8px 12px}
+body.recruiter .tt-note{display:none}
+.tt-fig{margin:6px 0 0}
+.tt-fig svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:8px;background:var(--white)}
+.tt-fig figcaption{color:var(--muted);margin-top:6px;font-size:11px}
+.tt-src{margin-top:24px;color:var(--muted);font-size:11px;line-height:1.8}
+.tt-src a{color:var(--muted)}
+.sqlall{margin-top:18px}
+.sqlall summary{list-style:none;cursor:pointer;display:inline-block;margin:0}
+.sqlall summary::-webkit-details-marker{display:none}
+.sqlall[open] summary{background:var(--ink);color:var(--white)}
+.sqlbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:12px 0 6px;color:var(--muted)}
+.code.tall{max-height:60vh;overflow:auto}
+.finds{margin:0;padding-left:18px}.finds li{margin:6px 0}
+.code{background:var(--dark);color:#E6E8EE;border-radius:8px;padding:14px 16px;overflow-x:auto;font:12px/1.55 var(--mono);margin:0}
+.gallery{display:flex;flex-wrap:wrap;gap:14px}
+.gallery figure{flex:1 1 100%}
+.gallery figure.tall{flex:1 1 calc(50% - 7px)}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--line)}
+.gallery figcaption{color:var(--muted);margin-top:5px;font-size:11px}
+.copy{border:1px solid var(--ink);background:var(--yellow);border-radius:999px;padding:3px 12px;cursor:pointer;font-size:13px}
+
+@media (prefers-reduced-motion: no-preference){
+  dialog.sheet[open]{animation:slide .35s cubic-bezier(.22,.8,.2,1)}
+  @keyframes slide{from{transform:translateX(40px);opacity:.3}}
+}
+@media (max-width:900px){
+  .avatar{align-self:flex-start;margin:0 0 -10px}
+  .intro{grid-template-columns:1fr;gap:28px}
+  .index{grid-template-columns:repeat(2,1fr);row-gap:24px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  :root{--cw:250px;--ch:170px}
+  .row{grid-template-columns:1fr;gap:4px}
+  .index{grid-template-columns:1fr}
+  .card .big{font-size:38px}
+}
+</style>
+</head>
+<body class="recruiter">
+<div class="wrap">
+  <header class="bar">
+    <div class="id"><span class="dot" aria-hidden="true"></span><span class="mono">Cadence Zhang — Portfolio</span></div>
+    <nav class="links" aria-label="Sections">
+      <button class="pill" type="button" data-open="education">Education</button>
+      <button class="pill" type="button" data-open="experience">Experience</button>
+      <button class="pill" type="button" data-open="skills">Skills</button>
+      <button class="pill" type="button" data-open="contact">Contact</button>
+    </nav>
+  </header>
+
+  <section class="cover" id="cover">
+    <button class="face" id="face" type="button" aria-label="Open my introduction">
+      <span class="head" id="head">
+        <img class="base" src="avatar-base.webp" width="1000" height="914" alt="Illustrated Q-version portrait of Cadence in a blue cap, winking">
+        <span class="eyeclip" aria-hidden="true"><img class="iris" id="iris" src="avatar-iris.webp" alt=""></span>
+      </span>
+      <span class="hint mono">Click me</span>
+    </button>
+    <h1 class="name">Cadence Zhang</h1>
+    <div class="contact">
+      <a href="mailto:cadencezhang52@gmail.com">cadencezhang52@gmail.com</a>
+      <span aria-hidden="true">/</span>
+      <a href="tel:+6591053512">+65 9105 3512</a>
+      <span aria-hidden="true">/</span>
+      <a href="https://www.linkedin.com/in/itsztt" target="_blank" rel="noopener">linkedin.com/in/itsztt</a>
+      <span aria-hidden="true">/</span>
+      <span>Singapore</span>
+    </div>
+    <a class="down mono" href="#works">Scroll to see my work ↓</a>
+  </section>
+
+  <div class="works-head" id="works">
+    <div class="l">
+      <span class="mono">Selected works</span>
+      <div class="chipset" role="group" aria-label="Filter by role">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All<span class="n"></span></button>
+        <button class="chip" type="button" data-filter="product" aria-pressed="false">Product<span class="n"></span></button>
+        <button class="chip" type="button" data-filter="analytics" aria-pressed="false">Analytics &amp; CRM<span class="n"></span></button>
+        <button class="chip" type="button" data-filter="commercial" aria-pressed="false">Trade &amp; Commercial<span class="n"></span></button>
+        <button class="chip" type="button" data-filter="digital" aria-pressed="false">Digital &amp; Brand<span class="n"></span></button>
+      </div>
+    </div>
+    <div class="modes" role="group" aria-label="Layout">
+      <button class="pill" type="button" data-mode="flat" aria-pressed="false">Flat</button>
+      <button class="pill" type="button" data-mode="ring" aria-pressed="false">Ring</button>
+    </div>
+  </div>
+
+  <div class="stage" id="stage"><div class="world" id="world"></div></div>
+  <div class="stage-foot">
+    <span class="mono" id="hint">Click a card to open it</span>
+    <span style="display:flex;gap:14px;align-items:center">
+      
+      <span class="mono" id="counter">01 — 17</span>
+    </span>
+  </div>
+
+  <section class="index" aria-label="More about me">
+    <button class="ix" type="button" data-open="education"><span class="mono k">01</span><h2>Education</h2>
+      <ul class="ixl">
+        <li><b>MSc Marketing Analytics &amp; Insights</b>, NUS Business School<span class="mono">Aug 2025 – Jan 2027</span></li>
+        <li><b>BSc, Double Major</b> in Business Management and Project &amp; Facilities Management, NUS<span class="mono">Aug 2021 – Jun 2025</span></li>
+      </ul></button>
+    <button class="ix" type="button" data-open="experience"><span class="mono k">02</span><h2>Experience</h2>
+      <ul class="ixl">
+        <li><b>Trade Marketing &amp; Commercial Intern</b>, L'Oréal Singapore (Dermatological Beauty)<span class="mono">Jul 2026 – Jan 2027</span></li>
+        <li><b>Digital Marketing Intern</b>, Rachelle and the Rabbit Distillery<span class="mono">Jan 2026 – May 2026</span></li>
+        <li><b>Marketing Intern</b>, BlueFocus Communication Group, Beijing<span class="mono">May 2024 – Aug 2024</span></li>
+        <li class="more">+ RecruitFirst, Sephora</li>
+      </ul></button>
+    <button class="ix" type="button" data-open="skills"><span class="mono k">03</span><h2>Skills</h2>
+      <ul class="ixl">
+        <li><b>Data:</b> Python, SQL, R, Tableau, Excel (Pivot Tables, XLOOKUP)</li>
+        <li><b>Ads &amp; growth:</b> Meta Ads, short video, livestreams, SEO/SEM</li>
+        <li><b>Commercial:</b> promo planning, sell-out analysis, JBP support</li>
+        <li><b>Languages:</b> English, Mandarin (中文)</li>
+      </ul></button>
+    <button class="ix" type="button" data-open="contact"><span class="mono k">04</span><h2>Contact</h2>
+      <ul class="ixl">
+        <li>cadencezhang52@gmail.com</li>
+        <li>+65 9105 3512</li>
+        <li>linkedin.com/in/itsztt</li>
+        <li><b>Available</b> full-time from 1 Feb 2027</li>
+      </ul></button>
+  </section>
+
+  <footer class="mono"><span>© 2026 Cadence Zhang</span><span>Singapore</span></footer>
+</div>
+
+<!-- side panels -->
+<dialog class="pop" id="intro" aria-labelledby="intro-h">
+  <div class="pop-in">
+    <div class="sh-head" style="padding:14px 0;border:0"><span class="mono">Hello</span><button class="x mono" type="button" data-close>Close</button></div>
+    <h2 id="intro-h">Data in,<br><span style="color:var(--blue)">decisions</span> out.</h2>
+    <p class="intro-p">I'm Cadence, a Marketing Analytics &amp; Insights graduate from NUS. I measure campaigns, forecast demand and turn sales and content data into the next move, for brands like L'Oréal, in English and Mandarin.</p>
+    <dl class="spec">
+      <dt>Focus</dt><dd>Marketing analytics · Ads · Commercial</dd>
+      <dt>Education</dt><dd>MSc Marketing Analytics &amp; Insights, NUS</dd>
+      <dt>Graduating</dt><dd>January 2027</dd>
+      <dt>Available</dt><dd>Full-time from 1 February 2027</dd>
+      <dt>Languages</dt><dd>English · Mandarin (中文)</dd>
+    </dl>
+    <div class="pop-actions">
+      <button class="go dark" type="button" id="toWork">See my work →</button>
+      <button class="go" type="button" data-open="experience">Experience</button>
+      <button class="go" type="button" data-open="skills">Skills</button>
+      <button class="go" type="button" data-open="education">Education</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="education" aria-labelledby="education-h">
+  <div class="sh-head"><span class="mono">01 / Education</span><button class="x mono" type="button" data-close>Close</button></div>
+  <div class="sh-body">
+    <h2 id="education-h">Education</h2>
+    <p class="lede">Two degrees from the National University of Singapore.</p>
+    <div class="row"><span class="mono when">Aug 2025 –<br>Jan 2027</span><div>
+      <h3>NUS Business School</h3><div class="role">Master of Science in Marketing Analytics &amp; Insights</div>
+      <div class="kv"><span>AI in Marketing</span><span>Big Data</span><span>Marketing Analytics</span><span>Pricing Analytics</span><span>Data Visualisation</span><span>CRM</span><span>Product &amp; Brand Management</span></div>
+      <ul><li>Projects: Heytea US CRM analysis in SQL (Customer Relationship Management), NUSer真心话 RedNote account (Digital Marketing) and Peachy Bum (Marketing Strategy).</li></ul>
+    </div></div>
+    <div class="row"><span class="mono when">Aug 2021 –<br>Jun 2025</span><div>
+      <h3>National University of Singapore</h3><div class="role">Bachelor of Science, Double Major</div>
+      <ul>
+        <li><b>Business Management:</b> Marketing, Finance, Accounting, Business Operations</li>
+        <li><b>Project &amp; Facilities Management:</b> Project Management Law, Project Finance, Construction Technology, Construction Enterprise Management</li>
+      </ul>
+    </div></div>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="experience" aria-labelledby="experience-h">
+  <div class="sh-head"><span class="mono">02 / Experience</span><button class="x mono" type="button" data-close>Close</button></div>
+  <div class="sh-body">
+    <h2 id="experience-h">Experience</h2>
+    <p class="lede">Commercial analytics, digital growth and content, across Singapore and Beijing.</p>
+    <div class="row"><span class="mono when">Jul 2026 –<br>Jan 2027</span><div>
+      <h3>L'Oréal Singapore</h3><div class="role">Trade Marketing &amp; Commercial Intern · Dermatological Beauty Division (MY/SG)</div>
+      <ul>
+        <li><b>Performance analytics:</b> Sell-out and promotional uplift analysis across Watsons, Guardian and Unity (Excel Pivot Tables, XLOOKUP) to measure campaign effectiveness and plan the next cycle.</li>
+        <li><b>Forecasting &amp; planning:</b> Built the 2027 New Product Development forecast that sets listing priorities and stock commitments; YTD sales analysis for the annual Joint Business Plan.</li>
+        <li><b>Competitive intelligence:</b> Weekly field and online audits of competitor pricing and promotions, turned into benchmarking decks for leadership.</li>
+        <li><b>Promotions &amp; activations:</b> Monthly promo briefs for Key Account Manager sign-off; ran 8 in-store activations end-to-end with agencies and merchandising teams.</li>
+      </ul>
+      <div class="kv"><span class="hl">3 retail partners</span><span class="hl">8 activations</span></div>
+    </div></div>
+    <div class="row"><span class="mono when">Jan 2026 –<br>May 2026</span><div>
+      <h3>Rachelle and the Rabbit Distillery</h3><div class="role">Digital Marketing Intern</div>
+      <ul>
+        <li><b>Paid &amp; organic growth:</b> Meta ad placements, campaigns, product launches and offline brand events.</li>
+        <li><b>Metrics-driven iteration:</b> Weekly paid and organic reporting used to adjust content, posting cadence, targeting and SEO/SEM.</li>
+        <li><b>User experience:</b> Restructured website content and page flow for clearer products and easier navigation.</li>
+      </ul>
+      <div class="kv"><span class="hl">~20% visibility &amp; engagement growth</span><span>3 platforms</span></div>
+    </div></div>
+    <div class="row"><span class="mono when">May 2024 –<br>Aug 2024</span><div>
+      <h3>BlueFocus Communication Group</h3><div class="role">Marketing Intern · Beijing</div>
+      <ul>
+        <li>Published 20+ posts a week on TikTok and Zhihu; analysed content metrics daily to refine copy for engagement and retention.</li>
+        <li>Ran livestreams 3+ times a week with OBS Studio, coordinating speakers and guests.</li>
+        <li>Built relationships with 50+ partner companies; designed posters and covers reaching 2,600+ people weekly.</li>
+      </ul>
+    </div></div>
+    <div class="row"><span class="mono when">Dec 2023 –<br>Jan 2024</span><div>
+      <h3>RecruitFirst Singapore</h3><div class="role">Human Resource Management Associate Intern</div>
+      <ul>
+        <li>Sourced 100+ CVs a day and shortlisted 10+ candidates a week against KPI targets.</li>
+        <li>Coordinated 50+ candidates and hiring managers; built daily and weekly Excel reports on recruitment efficiency.</li>
+      </ul>
+    </div></div>
+    <div class="row"><span class="mono when">Apr 2021 –<br>Aug 2021</span><div>
+      <h3>Sephora Singapore</h3><div class="role">Retail Sales Management Assistant</div>
+      <ul>
+        <li>Guided customers through recommendations and trials, contributing to a 20% increase in monthly sales.</li>
+        <li>Synthesised insights from 200+ customer interactions; supported inventory planning for peaks such as Black Friday.</li>
+      </ul>
+    </div></div>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="skills" aria-labelledby="skills-h">
+  <div class="sh-head"><span class="mono">03 / Skills</span><button class="x mono" type="button" data-close>Close</button></div>
+  <div class="sh-body">
+    <h2 id="skills-h">Skills</h2>
+    <p class="lede">What I work with.</p>
+    <div class="row"><span class="mono when">Data</span><div class="kv" style="margin:0"><span>Python</span><span>SQL</span><span>R</span><span>Tableau</span><span>Excel · Pivot · XLOOKUP</span><span>Funnel analysis</span><span>Forecasting</span></div></div>
+    <div class="row"><span class="mono when">Ads &amp; growth</span><div class="kv" style="margin:0"><span>Meta Ads</span><span>Short video</span><span>Livestreams</span><span>SEO/SEM</span><span>Audience targeting</span></div></div>
+    <div class="row"><span class="mono when">Commercial</span><div class="kv" style="margin:0"><span>Promo planning</span><span>Sell-out analysis</span><span>JBP support</span><span>Competitor audits</span><span>POSM &amp; activations</span></div></div>
+    <div class="row"><span class="mono when">Tools</span><div class="kv" style="margin:0"><span>PowerPoint</span><span>Canva</span><span>CapCut</span><span>OBS Studio</span></div></div>
+    <div class="row"><span class="mono when">Languages</span><div class="kv" style="margin:0"><span class="hl">English</span><span class="hl">Mandarin</span></div></div>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="contact" aria-labelledby="contact-h">
+  <div class="sh-head"><span class="mono">04 / Contact</span><button class="x mono" type="button" data-close>Close</button></div>
+  <div class="sh-body">
+    <h2 id="contact-h">Contact</h2>
+    <p class="lede">Open to full-time roles in Singapore from 1 February 2027.</p>
+    <div class="row"><span class="mono when">Email</span><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><b>cadencezhang52@gmail.com</b><button class="copy" type="button" data-copy="cadencezhang52@gmail.com">Copy</button></div></div>
+    <div class="row"><span class="mono when">Phone</span><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><b>+65 9105 3512</b><button class="copy" type="button" data-copy="+6591053512">Copy</button></div></div>
+    <div class="row"><span class="mono when">LinkedIn</span><div><a href="https://www.linkedin.com/in/itsztt" target="_blank" rel="noopener">linkedin.com/in/itsztt</a></div></div>
+    <div class="row"><span class="mono when">Resume</span><div><span class="todo-box" style="display:inline-block;margin:0">Add your resume PDF link</span></div></div>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="work" aria-labelledby="work-h">
+  <div class="sh-head"><span class="mono" id="work-k">Work</span><button class="x mono" type="button" data-close>Close</button></div>
+  <div class="sh-body" id="work-body"></div>
+</dialog>
+
+<script type="text/plain" id="sql-src">
+-- 3.1.1. Customer Value Segmentation
+-- Calcuate customer-level lifetime revenue, order frequency, and average order value,
+-- then segment customers into value tiers using NTILE.
+
+WITH customer_summary AS (
+    SELECT
+        c.customer_id,
+        COUNT(o.order_id) AS total_orders,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        ROUND(COALESCE(AVG(o.total_amount), 0), 2) AS avg_order_value
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY c.customer_id
+),
+segmented_customers AS (
+    SELECT
+        *,
+        NTILE(5) OVER (ORDER BY lifetime_revenue DESC) AS revenue_segment
+    FROM customer_summary
+)
+SELECT
+    revenue_segment,
+    COUNT(customer_id) AS customers_in_segment,
+    ROUND(AVG(lifetime_revenue), 2) AS avg_lifetime_revenue,
+    ROUND(AVG(total_orders), 2) AS avg_orders_per_customer,
+    ROUND(AVG(avg_order_value), 2) AS avg_order_value
+FROM segmented_customers
+GROUP BY revenue_segment
+ORDER BY revenue_segment;
+
+-- 3.1.2. Acquisition Channel Quality
+-- Measure customer value by acquisition channel using customer-level revenue metrics.
+
+WITH customer_value AS (
+    SELECT
+        c.customer_id,
+        c.acquisition_channel,
+        COUNT(o.order_id) AS total_orders,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        ROUND(COALESCE(AVG(o.total_amount), 0), 2) AS avg_order_value
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY
+        c.customer_id,
+        c.acquisition_channel
+)
+SELECT
+    acquisition_channel,
+    COUNT(customer_id) AS number_of_customers,
+    ROUND(AVG(lifetime_revenue), 2) AS avg_customer_lifetime_revenue,
+    ROUND(AVG(total_orders), 2) AS avg_orders_per_customer,
+    ROUND(AVG(avg_order_value), 2) AS avg_customer_order_value,
+    ROUND(SUM(lifetime_revenue), 2) AS total_revenue_generated
+FROM customer_value
+GROUP BY acquisition_channel
+ORDER BY avg_customer_lifetime_revenue DESC;
+
+-- 3.1.2b. High-Value Customer Share by Channel
+-- Identify the proportion of top-segment customers within each acquisition channel.
+
+WITH customer_data AS (
+    SELECT
+        c.customer_id,
+        c.acquisition_channel,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY
+        c.customer_id,
+        c.acquisition_channel
+),
+segmented AS (
+    SELECT
+        *,
+        NTILE(5) OVER (ORDER BY lifetime_revenue DESC) AS revenue_segment
+    FROM customer_data
+)
+SELECT
+    acquisition_channel,
+    COUNT(*) AS total_customers,
+    SUM(CASE WHEN revenue_segment = 1 THEN 1 ELSE 0 END) AS high_value_customers,
+    ROUND(
+        100.0 * SUM(CASE WHEN revenue_segment = 1 THEN 1 ELSE 0 END) / COUNT(*),
+        2
+    ) AS high_value_pct
+FROM segmented
+GROUP BY acquisition_channel
+ORDER BY high_value_pct DESC;
+
+-- 3.1.3. Churn Risk and Value Exposure
+-- Calculate inactivity days from the most recent completed order,
+-- classify customers with more than 90 days of inactivity as high risk,
+-- and measure the share of customers and revenue at risk.
+
+WITH customer_activity AS (
+    SELECT
+        c.customer_id,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        MAX(o.order_date) AS last_order_date,
+        CASE
+            WHEN MAX(o.order_date) IS NULL THEN NULL
+            ELSE CAST(julianday('2025-12-31') - julianday(MAX(o.order_date)) AS INTEGER)
+        END AS inactive_days
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY c.customer_id
+)
+SELECT
+    ROUND(
+        100.0 * SUM(CASE WHEN inactive_days > 90 THEN 1 ELSE 0 END) / COUNT(*),
+        2
+    ) AS high_risk_customer_pct,
+    ROUND(
+        100.0 * SUM(CASE WHEN inactive_days > 90 THEN lifetime_revenue ELSE 0 END)
+        / SUM(lifetime_revenue),
+        2
+    ) AS revenue_at_risk_pct
+FROM customer_activity;
+
+-- 3.1.3b. High-Value Customers at Risk
+-- Segment customers by value, then calculate the proportion of high-value customers
+-- who are classified as high risk.
+
+WITH customer_activity AS (
+    SELECT
+        c.customer_id,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        MAX(o.order_date) AS last_order_date,
+        CASE
+            WHEN MAX(o.order_date) IS NULL THEN NULL
+            ELSE CAST(julianday('2025-12-31') - julianday(MAX(o.order_date)) AS INTEGER)
+        END AS inactive_days
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY c.customer_id
+),
+segmented AS (
+    SELECT
+        *,
+        NTILE(5) OVER (ORDER BY lifetime_revenue DESC) AS revenue_segment
+    FROM customer_activity
+)
+SELECT
+    ROUND(
+        100.0 * SUM(CASE WHEN revenue_segment = 1 AND inactive_days > 90 THEN 1 ELSE 0 END)
+        / SUM(CASE WHEN revenue_segment = 1 THEN 1 ELSE 0 END),
+        2
+    ) AS high_value_high_risk_pct
+FROM segmented;
+
+-- 3.1.3c. Churn Rate by Revenue Segment
+-- Compare churn rates across revenue segments to assess whether churn risk
+-- differs by customer value.
+
+WITH customer_activity AS (
+    SELECT
+        c.customer_id,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        MAX(o.order_date) AS last_order_date,
+        CASE
+            WHEN MAX(o.order_date) IS NULL THEN NULL
+            ELSE CAST(julianday('2025-12-31') - julianday(MAX(o.order_date)) AS INTEGER)
+        END AS inactive_days
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY c.customer_id
+),
+segmented AS (
+    SELECT
+        *,
+        NTILE(5) OVER (ORDER BY lifetime_revenue DESC) AS revenue_segment
+    FROM customer_activity
+)
+SELECT
+    revenue_segment,
+    COUNT(*) AS customers,
+    ROUND(
+        100.0 * AVG(CASE WHEN inactive_days > 90 THEN 1.0 ELSE 0 END),
+        2
+    ) AS churn_rate
+FROM segmented
+GROUP BY revenue_segment
+ORDER BY revenue_segment;
+
+-- 3.1.4. Membership Effects
+-- Compare members and non-members on lifetime revenue, order frequency,
+-- and average order value.
+
+WITH customer_summary AS (
+    SELECT
+        c.customer_id,
+        c.is_member,
+        COUNT(o.order_id) AS total_orders,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        ROUND(COALESCE(AVG(o.total_amount), 0), 2) AS avg_order_value
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY
+        c.customer_id,
+        c.is_member
+)
+SELECT
+    is_member,
+    COUNT(customer_id) AS num_customers,
+    ROUND(AVG(lifetime_revenue), 2) AS avg_revenue,
+    ROUND(AVG(total_orders), 2) AS avg_orders,
+    ROUND(AVG(avg_order_value), 2) AS avg_aov
+FROM customer_summary
+GROUP BY is_member
+ORDER BY is_member DESC;
+
+-- 3.1.4b. Membership and Churn Risk
+-- Compare members and non-members on value, order frequency, and high-risk share.
+
+WITH customer_data AS (
+    SELECT
+        c.customer_id,
+        c.is_member,
+        COUNT(o.order_id) AS total_orders,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        MAX(o.order_date) AS last_order_date,
+        CASE
+            WHEN MAX(o.order_date) IS NULL THEN NULL
+            ELSE CAST(julianday('2025-12-31') - julianday(MAX(o.order_date)) AS INTEGER)
+        END AS inactive_days
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY
+        c.customer_id,
+        c.is_member
+)
+SELECT
+    is_member,
+    COUNT(*) AS num_customers,
+    ROUND(AVG(lifetime_revenue), 2) AS avg_revenue,
+    ROUND(AVG(total_orders), 2) AS avg_orders,
+    ROUND(100.0 * AVG(CASE WHEN inactive_days > 90 THEN 1.0 ELSE 0 END), 2) AS high_risk_pct
+FROM customer_data
+GROUP BY is_member
+ORDER BY is_member DESC;
+
+-- 3.1.4c. Loyalty Tier Effects
+-- Compare customer value and purchasing behavior across loyalty tiers.
+
+WITH customer_summary AS (
+    SELECT
+        c.customer_id,
+        c.loyalty_tier,
+        COUNT(o.order_id) AS total_orders,
+        ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+        ROUND(COALESCE(AVG(o.total_amount), 0), 2) AS avg_order_value
+    FROM customers c
+    LEFT JOIN orders o
+        ON c.customer_id = o.customer_id
+       AND o.status = 'completed'
+    GROUP BY
+        c.customer_id,
+        c.loyalty_tier
+)
+SELECT
+    loyalty_tier,
+    COUNT(customer_id) AS num_customers,
+    ROUND(AVG(lifetime_revenue), 2) AS avg_revenue,
+    ROUND(AVG(total_orders), 2) AS avg_orders,
+    ROUND(AVG(avg_order_value), 2) AS avg_aov
+FROM customer_summary
+GROUP BY loyalty_tier
+ORDER BY avg_revenue DESC;
+
+--3.2 Product and Catergory Performance
+-- Q1. Category performance：each category's revenue / units sold / gross profit
+SELECT
+    c.category_name,
+    COUNT(DISTINCT oi.order_id) AS orders_containing_category,
+    SUM(oi.quantity) AS units_sold,
+    ROUND(SUM(oi.line_total), 2) AS revenue,
+    ROUND(SUM((oi.unit_price - p.unit_cost) * oi.quantity), 2) AS gross_profit,
+    ROUND(AVG(oi.unit_price), 2) AS avg_selling_price
+FROM order_items oi
+JOIN products p
+    ON oi.product_id = p.product_id
+JOIN categories c
+    ON p.category_id = c.category_id
+JOIN orders o
+    ON oi.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY c.category_name
+ORDER BY revenue DESC;
+
+--Q2. Category revenue share：Percentage of total revenue from each category
+WITH category_summary AS (
+    SELECT
+        c.category_name,
+        SUM(oi.line_total) AS revenue
+    FROM order_items oi
+    JOIN products p
+        ON oi.product_id = p.product_id
+    JOIN categories c
+        ON p.category_id = c.category_id
+    JOIN orders o
+        ON oi.order_id = o.order_id
+    WHERE o.status = 'completed'
+    GROUP BY c.category_name
+),
+total_revenue AS (
+    SELECT SUM(revenue) AS total_rev
+    FROM category_summary
+)
+SELECT
+    cs.category_name,
+    ROUND(cs.revenue, 2) AS revenue,
+    ROUND(cs.revenue * 100.0 / tr.total_rev, 2) AS revenue_share_pct
+FROM category_summary cs
+CROSS JOIN total_revenue tr
+ORDER BY revenue DESC;
+
+--Q3. Top products: Best performer in products
+SELECT
+    p.product_name,
+    c.category_name,
+    p.is_seasonal,
+    COUNT(DISTINCT oi.order_id) AS orders_containing_product,
+    SUM(oi.quantity) AS units_sold,
+    ROUND(SUM(oi.line_total), 2) AS revenue,
+    ROUND(SUM((oi.unit_price - p.unit_cost) * oi.quantity), 2) AS gross_profit
+FROM order_items oi
+JOIN products p
+    ON oi.product_id = p.product_id
+JOIN categories c
+    ON p.category_id = c.category_id
+JOIN orders o
+    ON oi.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY p.product_id, p.product_name, c.category_name, p.is_seasonal
+ORDER BY SUM(oi.line_total) DESC
+Limit 30;
+
+--Q4. Bottom products：Weakest performer in products
+SELECT
+    p.product_name,
+    c.category_name,
+    COUNT(DISTINCT oi.order_id) AS orders_containing_product,
+    SUM(oi.quantity) AS units_sold,
+    ROUND(SUM(oi.line_total), 2) AS revenue,
+    ROUND(SUM((oi.unit_price - p.unit_cost) * oi.quantity), 2) AS gross_profit
+FROM order_items oi
+JOIN products p
+    ON oi.product_id = p.product_id
+JOIN categories c
+    ON p.category_id = c.category_id
+JOIN orders o
+    ON oi.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY p.product_id, p.product_name, c.category_name
+ORDER BY revenue ASC
+LIMIT 10;
+
+--Q5.Best-selling Product In Each City
+WITH city_product_sales AS (
+    SELECT
+        s.city,
+        s.state_code,
+        p.product_name,
+        SUM(oi.line_total) AS revenue,
+        RANK() OVER (
+            PARTITION BY s.city
+            ORDER BY SUM(oi.line_total) DESC
+        ) AS rnk
+    FROM order_items oi
+    JOIN products p
+        ON oi.product_id = p.product_id
+    JOIN orders o
+        ON oi.order_id = o.order_id
+    JOIN stores s
+        ON o.store_id = s.store_id
+    WHERE o.status = 'completed'
+    GROUP BY s.city, p.product_name
+)
+
+SELECT
+    city,
+    state_code,
+    product_name,
+    ROUND(revenue,2) AS revenue
+FROM city_product_sales
+WHERE rnk = 1
+ORDER BY revenue DESC;
+
+--Q6.Category performance by channel
+SELECT
+    c.category_name,
+    o.channel,
+    SUM(oi.quantity) AS units_sold,
+    ROUND(SUM(oi.line_total), 2) AS revenue
+FROM order_items oi
+JOIN products p
+    ON oi.product_id = p.product_id
+JOIN categories c
+    ON p.category_id = c.category_id
+JOIN orders o
+    ON oi.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY c.category_name, o.channel
+ORDER BY c.category_name, revenue DESC;
+
+--Q7. The highest-revenue category in each channel
+WITH category_channel AS (
+    SELECT
+        o.channel,
+        c.category_name,
+        SUM(oi.line_total) AS revenue,
+        RANK() OVER (
+            PARTITION BY o.channel
+            ORDER BY SUM(oi.line_total) DESC
+        ) AS rnk
+    FROM order_items oi
+    JOIN products p
+        ON oi.product_id = p.product_id
+    JOIN categories c
+        ON p.category_id = c.category_id
+    JOIN orders o
+        ON oi.order_id = o.order_id
+    WHERE o.status = 'completed'
+    GROUP BY o.channel, c.category_name
+)
+SELECT
+    channel,
+    category_name,
+    ROUND(revenue, 2) AS revenue
+FROM category_channel
+WHERE rnk = 1
+ORDER BY revenue DESC;
+
+--Q8. Seasonal vs non-seasonal
+SELECT
+    CASE
+        WHEN p.is_seasonal = 1 THEN 'Seasonal'
+        ELSE 'Non-seasonal'
+    END AS seasonal_flag,
+    COUNT(DISTINCT p.product_id) AS num_products,
+    SUM(oi.quantity) AS units_sold,
+    ROUND(SUM(oi.line_total), 2) AS revenue,
+    ROUND(AVG(oi.line_total), 2) AS avg_line_revenue
+FROM order_items oi
+JOIN products p
+    ON oi.product_id = p.product_id
+JOIN orders o
+    ON oi.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY seasonal_flag;
+
+--Q9. Geographic pattern
+WITH state_category AS (
+    SELECT
+        s.state_code,
+        c.category_name,
+        SUM(oi.line_total) AS revenue,
+        RANK() OVER (
+            PARTITION BY s.state_code
+            ORDER BY SUM(oi.line_total) DESC
+        ) AS rnk
+    FROM order_items oi
+    JOIN products p
+        ON oi.product_id = p.product_id
+    JOIN categories c
+        ON p.category_id = c.category_id
+    JOIN orders o
+        ON oi.order_id = o.order_id
+    JOIN stores s
+        ON o.store_id = s.store_id
+    WHERE o.status = 'completed'
+    GROUP BY s.state_code, c.category_name
+)
+SELECT
+    state_code,
+    category_name,
+    ROUND(revenue, 2) AS revenue
+FROM state_category
+WHERE rnk = 1
+ORDER BY revenue DESC;
+
+--Q10. Monthly category trend: Monthly revenue trend for different categories
+SELECT
+    strftime('%m', o.order_date) AS month,
+    c.category_name,
+    ROUND(SUM(oi.line_total), 2) AS revenue
+FROM order_items oi
+JOIN products p
+    ON oi.product_id = p.product_id
+JOIN categories c
+    ON p.category_id = c.category_id
+JOIN orders o
+    ON oi.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY month, c.category_name
+ORDER BY month, revenue DESC;
+
+--Q11. Top 3 products within each category
+WITH product_rank AS (
+    SELECT
+        c.category_name,
+        p.product_name,
+        SUM(oi.line_total) AS revenue,
+        RANK() OVER (
+            PARTITION BY c.category_name
+            ORDER BY SUM(oi.line_total) DESC
+        ) AS rnk
+    FROM order_items oi
+    JOIN products p
+        ON oi.product_id = p.product_id
+    JOIN categories c
+        ON p.category_id = c.category_id
+    JOIN orders o
+        ON oi.order_id = o.order_id
+    WHERE o.status = 'completed'
+    GROUP BY c.category_name, p.product_name
+)
+SELECT
+    category_name,
+    product_name,
+    ROUND(revenue, 2) AS revenue
+FROM product_rank
+WHERE rnk <= 3
+ORDER BY category_name, revenue DESC;
+
+-- Q12.Profit margin by category
+SELECT
+    c.category_name,
+    ROUND(SUM(oi.line_total), 2) AS revenue,
+    ROUND(SUM((oi.unit_price - p.unit_cost) * oi.quantity), 2) AS gross_profit,
+    ROUND(
+        SUM((oi.unit_price - p.unit_cost) * oi.quantity) * 100.0
+        / SUM(oi.line_total),
+        2
+    ) AS gross_margin_pct
+FROM order_items oi
+JOIN products p
+    ON oi.product_id = p.product_id
+JOIN categories c
+    ON p.category_id = c.category_id
+JOIN orders o
+    ON oi.order_id = o.order_id
+WHERE o.status = 'completed'
+GROUP BY c.category_name
+ORDER BY gross_margin_pct DESC;
+
+-- 3.3 Heytea Store & Location Analysis
+-- Store
+-- Overall Revenue Performance Across Stores
+SELECT
+    o.store_id,
+    s.store_name,
+    s.state_code,
+    s.city,
+    s.opening_date,
+    SUM(o.total_amount) AS store_amount,
+    RANK() OVER (ORDER BY SUM(o.total_amount) DESC) AS store_rank
+FROM orders AS o
+LEFT JOIN stores AS s
+ON o.store_id = s.store_id
+GROUP BY o.store_id
+ORDER BY store_amount DESC;
+
+-- Performance Ranking of the Six New Stores Opened in 2025
+WITH store_revenue_rank AS (
+    SELECT
+        o.store_id,
+        s.store_name,
+        s.state_code,
+        s.city,
+        s.opening_date,
+        SUM(o.total_amount) AS store_amount,
+        RANK() OVER (ORDER BY SUM(o.total_amount) DESC) AS overall_store_rank
+    FROM orders AS o
+    LEFT JOIN stores AS s
+        ON o.store_id = s.store_id
+    GROUP BY
+        o.store_id,
+        s.store_name,
+        s.state_code,
+        s.city,
+        s.opening_date
+)
+SELECT *
+FROM store_revenue_rank
+WHERE opening_date >= '2025-01-01'
+ORDER BY overall_store_rank;
+
+-- Store Revenue Across Different Channels
+SELECT
+    store_id,
+    channel,
+    SUM(total_amount) AS store_channel_amount
+FROM orders
+GROUP BY store_id, channel
+ORDER BY store_id ASC, store_channel_amount DESC;
+
+-- Revenue and Orders, Avg Order Value Across Different Channel
+SELECT
+    channel,
+    COUNT(*) AS channel_orders,
+    SUM(total_amount) AS channel_amount,
+    SUM(total_amount)*1.0/COUNT(*) AS average_order_value
+FROM orders
+GROUP BY channel
+ORDER BY channel_amount DESC;
+
+-- Stores with the highest growth From Each Channel
+SELECT
+    sca.store_id,
+    sca.channel,
+    MAX(sca.store_channel_amount) AS max_store_amount
+FROM (
+    SELECT
+        channel,
+        store_id,
+        SUM(total_amount) AS store_channel_amount
+    FROM orders
+    GROUP BY channel, store_id
+) AS sca
+GROUP BY channel
+ORDER BY max_store_amount DESC;
+
+-- Store Revenue Monthly Growth
+SELECT
+    store_id,
+    order_month,
+    monthly_sales,
+    LAG(monthly_sales) OVER (PARTITION BY store_id ORDER BY order_month) AS last_month_sales,
+    ROUND((monthly_sales-LAG(monthly_sales) OVER (PARTITION BY store_id ORDER BY order_month))/LAG(monthly_sales) OVER (PARTITION BY store_id ORDER BY order_month),2) AS monthly_growth_rate
+FROM
+(
+    SELECT
+        store_id,
+        strftime('%m',order_date) AS order_month,
+        SUM(total_amount) AS monthly_sales
+    FROM orders
+    GROUP BY store_id, order_month
+    ORDER BY store_id, order_month
+) AS ms;
+
+-- Store Revenue Quarter Growth
+SELECT
+    store_id,
+    order_quarter,
+    quarterly_sales,
+    LAG(quarterly_sales) OVER (PARTITION BY store_id ORDER BY order_quarter) AS last_quarter_sales,
+    ROUND((quarterly_sales - LAG(quarterly_sales) OVER (PARTITION BY store_id ORDER BY order_quarter)) * 1.0/ LAG(quarterly_sales) OVER (PARTITION BY store_id ORDER BY order_quarter),2) AS quarterly_growth_rate
+FROM (
+    SELECT
+        store_id,
+        CASE
+            WHEN strftime('%m', order_date) IN ('01','02','03') THEN 'Q1'
+            WHEN strftime('%m', order_date) IN ('04','05','06') THEN 'Q2'
+            WHEN strftime('%m', order_date) IN ('07','08','09') THEN 'Q3'
+            ELSE 'Q4'
+        END AS order_quarter,
+        SUM(total_amount) AS quarterly_sales
+    FROM orders
+    GROUP BY store_id, order_quarter
+) AS qs
+ORDER BY store_id, order_quarter;
+
+-- Part 2 Geographic Insights
+-- Rank States by Both Revenue & Transaction Volume
+SELECT
+    s.state_code,
+    COUNT(*) AS state_orders,
+    SUM(o.total_amount) AS state_revenue,
+    RANK() OVER (ORDER BY COUNT(*) DESC) AS order_rank,
+    RANK() OVER (ORDER BY SUM(o.total_amount) DESC) AS revenue_rank
+FROM orders AS o
+LEFT JOIN stores AS s
+    ON o.store_id = s.store_id
+GROUP BY s.state_code
+ORDER BY state_revenue DESC;
+
+-- Stores With Best Performance Within State
+SELECT *
+FROM (
+    SELECT
+        s.state_code,
+        o.store_id,
+        COUNT(*) AS store_orders,
+        SUM(o.total_amount) AS store_revenue,
+        RANK() OVER (
+            PARTITION BY s.state_code
+            ORDER BY SUM(o.total_amount) DESC
+        ) AS revenue_rank
+    FROM orders AS o
+    LEFT JOIN stores AS s
+        ON o.store_id = s.store_id
+    GROUP BY s.state_code, o.store_id
+) t
+WHERE revenue_rank = 1
+ORDER BY state_code, store_revenue DESC;
+
+--3.4.1 Campaign Performance
+SELECT
+    c.campaign_name,
+    c.campaign_type,
+    c.channel AS marketing_channel,
+    c.target_segment,
+    COUNT(o.order_id) AS completed_orders,
+    ROUND(SUM(o.total_amount), 2) AS revenue,
+    ROUND(AVG(o.total_amount), 2) AS avg_order_value,
+    ROUND(SUM(o.discount_amount), 2) AS total_discount,
+    ROUND(c.budget, 2) AS budget,
+    ROUND(SUM(o.total_amount) / NULLIF(c.budget, 0), 2) AS roas
+FROM campaigns c
+LEFT JOIN orders o
+    ON c.campaign_id = o.campaign_id
+   AND o.status = 'completed'
+GROUP BY c.campaign_id, c.campaign_name, c.campaign_type, c.channel, c.target_segment, c.budget
+ORDER BY revenue DESC;
+
+--3.4.2 Marketing channel effectiveness
+WITH campaign_order_perf AS (
+    SELECT
+        c.campaign_id,
+        c.channel,
+        c.budget,
+        c.discount_pct,
+        COUNT(o.order_id) AS completed_orders,
+        COALESCE(SUM(o.total_amount), 0) AS revenue,
+        AVG(o.total_amount) AS avg_order_value
+    FROM campaigns c
+    LEFT JOIN orders o
+        ON c.campaign_id = o.campaign_id
+       AND o.status = 'completed'
+    GROUP BY c.campaign_id, c.channel, c.budget, c.discount_pct
+)
+SELECT
+    channel AS marketing_channel,
+    COUNT(campaign_id) AS campaigns,
+    SUM(completed_orders) AS completed_orders,
+    ROUND(SUM(revenue), 2) AS revenue,
+    ROUND(AVG(avg_order_value), 2) AS avg_order_value_per_campaign,
+    ROUND(AVG(discount_pct), 2) AS avg_discount_pct,
+    ROUND(SUM(budget), 2) AS total_budget,
+    ROUND(SUM(revenue) / NULLIF(SUM(budget), 0), 2) AS roas
+FROM campaign_order_perf
+GROUP BY channel
+ORDER BY revenue DESC;
+
+--3.4.3 Target segment effectiveness
+WITH campaign_order_perf AS (
+    SELECT
+        c.campaign_id,
+        c.target_segment,
+        c.budget,
+        c.discount_pct,
+        COUNT(o.order_id) AS completed_orders,
+        COALESCE(SUM(o.total_amount), 0) AS revenue,
+        AVG(o.total_amount) AS avg_order_value
+    FROM campaigns c
+    LEFT JOIN orders o
+        ON c.campaign_id = o.campaign_id
+       AND o.status = 'completed'
+    GROUP BY c.campaign_id, c.target_segment, c.budget, c.discount_pct
+)
+SELECT
+    target_segment,
+    COUNT(campaign_id) AS campaigns,
+    SUM(completed_orders) AS completed_orders,
+    ROUND(SUM(revenue), 2) AS revenue,
+    ROUND(AVG(avg_order_value), 2) AS avg_order_value_per_campaign,
+    ROUND(AVG(discount_pct), 2) AS avg_discount_pct,
+    ROUND(SUM(budget), 2) AS total_budget,
+    ROUND(SUM(revenue) / NULLIF(SUM(budget), 0), 2) AS roas
+FROM campaign_order_perf
+GROUP BY target_segment
+ORDER BY revenue DESC;
+
+--END--
+</script>
+<script>
+// v = card colour, big/bl = the headline number on the card. status todo = still to build or add.
+const WORK = [
+  {id:"rednote", t:"NUSer真心话: a RedNote account from zero", org:"NUS Digital Marketing Project", when:"Oct–Nov 2025", cardOrg:"NUS Digital Marketing", roles:["product","analytics","digital"], status:"ready", v:"blue", big:"19K", bl:"views in 2 weeks",
+   d:"A student account about campus life and applications, launched from scratch with quantitative targets.", rednote:true,
+   link:"https://xhslink.cn/o/8qXKn68OtZq", linkText:"View the account on RedNote"},
+  {id:"heytea", t:"Heytea US: CRM and sales analysis in SQL", org:"NUS BMK5201 Customer Relationship Management · Group project", cardOrg:"NUS · Group project", roles:["analytics","commercial"], status:"ready", v:"dark", big:"52%", bl:"of revenue at churn risk",
+   d:"Heytea's 2025 US operating data (30,000 customers, 175,000 orders, 35 stores in 18 states) analysed in SQLite to find high-value customers, churn risk, winning products and the most efficient marketing channels.",
+   findings:[
+     "Customer value is concentrated: the top value tier averages $299 in lifetime revenue vs $4 for the lowest.",
+     "About half of customers had been inactive for 90+ days, putting 52% of revenue at churn risk. Membership lifts spend and frequency but barely reduces churn.",
+     "Fruit Tea drives 63% of revenue and has one of the highest gross margins (68%).",
+     "TikTok ads drove the most campaign revenue ($216K), but app push and email returned the most per dollar (ROAS 4.4 and 4.1).",
+     "Targeted campaigns (new, high-value and lapsed customers) beat broad all-customer campaigns on revenue and ROAS."
+   ],
+   code:`-- Churn risk and value exposure: customers inactive 90+ days
+WITH customer_activity AS (
+    SELECT c.customer_id,
+           ROUND(COALESCE(SUM(o.total_amount), 0), 2) AS lifetime_revenue,
+           CAST(julianday('2025-12-31') - julianday(MAX(o.order_date)) AS INTEGER) AS inactive_days
+    FROM customers c
+    LEFT JOIN orders o
+      ON c.customer_id = o.customer_id AND o.status = 'completed'
+    GROUP BY c.customer_id
+)
+SELECT
+    ROUND(100.0 * SUM(CASE WHEN inactive_days > 90 THEN 1 ELSE 0 END) / COUNT(*), 2) AS high_risk_customer_pct,
+    ROUND(100.0 * SUM(CASE WHEN inactive_days > 90 THEN lifetime_revenue ELSE 0 END)
+          / SUM(lifetime_revenue), 2) AS revenue_at_risk_pct
+FROM customer_activity;`,
+   skills:["CTEs","Window functions (NTILE, RANK, LAG)","Joins across 8 tables","Cohort & churn logic","ROAS"],
+   sqlAll:true},
+  {id:"sq", t:"Singapore Airlines: route profitability dashboard", org:"NUS BMK5104 Marketing Analytics, Visualization & Communication · Team of 6", cardOrg:"NUS · Team of 6", roles:["analytics","commercial"], status:"ready", v:"white", big:"60%", bl:"load factor, still losing money",
+   d:"A full year of Singapore Airlines flight data (revenue, cost, passengers, seats, punctuality) visualised in Tableau to find which routes make money, which don't, and why.",
+   findings:[
+     "The network is profitable overall ($1.29B operating profit, 11% average margin), and profit rises with distance: every loss-making route is within 3,000 km of Singapore.",
+     "Short-haul routes to Kuala Lumpur, Phuket and Penang lose money despite load factors near 60%, so the problem is converting demand into profit, not demand itself.",
+     "Revenue swings with the season (peak June–August, low in November) while capacity barely moves, leaving seats empty off-peak.",
+     "On loss-making routes, ground and passenger costs (mainly catering and passenger service) take 36% of total cost vs about 26% on healthy routes, made worse by delays.",
+     "Recommended seasonal and advance-booking pricing, a monthly KrisFlyer pass and flight-and-hotel bundles for Malaysia routes, and lighter catering on short hops."
+   ],
+   skills:["Tableau","KPI scorecard","RASK vs CASK","Seasonality","Cost breakdown"],
+   link:"https://public.tableau.com/views/SingaporeAirlineProject/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link", linkText:"Open the Tableau dashboard",
+   galleryTitle:"From the dashboard", gallery:[["sq-route-profit.webp","Profit margin vs distance: short-haul routes sit at the bottom"],["sq-route-map.webp","Route network coloured by margin"],["sq-cashflow.webp","Revenue vs cost through 2024"],["sq-capacity.webp","Capacity vs passengers by month"]]},
+  {id:"tiktok", t:"TikTok App Ads: creative element insights", org:"Self-initiated product teardown · Draft Nov 2026", cardOrg:"Product teardown", roles:["product","analytics"], status:"ready", v:"dark", big:"D7", bl:"creatives → players who stay",
+   d:"A product proposal for TikTok's app and game advertisers: show them which parts of their ad videos bring in players who are still playing a week later, and warn them before an ad wears out.",
+   html:`
+    <h3 class="mono tt-h">01 · The advertiser and the problem</h3>
+    <p>Take a mid-sized mobile game studio in Southeast Asia running app install campaigns. It needs a steady flow of new ad videos, because each one wears out within days. Ads Manager tells the team which ad got installs and at what cost. It doesn't tell them <b>which part of the video worked</b>, or whether those players were <b>still playing a week later</b>. So new creatives get briefed on gut feel, and a tired ad is only noticed after cost per install has already jumped.</p>
+
+    <h3 class="mono tt-h">02 · What TikTok offers today, and the gap</h3>
+    <table class="tt-table">
+      <tr><th>Tool</th><th>What it does well</th><th>What it leaves open</th></tr>
+      <tr><td>Smart+ creative Auto-select</td><td>Picks the best-performing creative automatically</td><td>Doesn't explain why it won, so the next brief is still a guess</td></tr>
+      <tr><td>Creative Center Top Ads</td><td>Frame-by-frame analysis of other brands' top ads</td><td>Not applied to the advertiser's own ads or their results after install</td></tr>
+      <tr><td>Ads Manager reporting</td><td>Spend, clicks, installs and in-app events per ad</td><td>Results by ad, not by hook, format or length; fatigue shows only once costs rise</td></tr>
+    </table>
+    <p class="tt-note">To complete: add 2–3 annotated screenshots from my own walkthrough of an app promotion campaign in Ads Manager.</p>
+
+    <h3 class="mono tt-h">03 · The proposal: creative element insights</h3>
+    <ol class="finds">
+      <li><b>Auto-tag every ad.</b> Reuse Creative Center's frame analysis on the advertiser's own videos: hook type in the first 2 seconds, gameplay vs creator vs animation, length, a person on screen or not, call to action, language.</li>
+      <li><b>Element scorecard.</b> For each tag, show click-through rate, install rate and 7-day retention and return on ad spend (from the advertiser's measurement partner or SDK), against the account average. Example: "Question hooks: +18% install rate, but −6% day-7 retention."</li>
+      <li><b>Early fatigue alert.</b> Flag an ad when its 2-second view rate and click-through rate fall while frequency rises, before cost per install jumps. Suggest which winning elements to remix, with a one-click brief into Symphony to generate new versions.</li>
+    </ol>
+
+    <h3 class="mono tt-h">04 · Metric tree</h3>
+    <figure class="tt-fig">
+      <svg viewBox="0 0 560 330" role="img" aria-label="Metric tree from ad spend to day-7 return on ad spend, with the feature's levers and guardrails">
+        <style>.b{fill:#FBFBFC;stroke:#0E0F12;stroke-width:1.2}.bh{fill:#2747D0}.t{font:600 12px Archivo,Arial,sans-serif;fill:#0E0F12}.th{font:600 12px Archivo,Arial,sans-serif;fill:#FBFBFC}.m{font:10px 'JetBrains Mono',monospace;fill:#6A6E77;letter-spacing:.03em}.l{stroke:#0E0F12;stroke-width:1.2;fill:none}.lv{fill:#F2D307;stroke:#0E0F12;stroke-width:1}.g{fill:#FBFBFC;stroke:#B4372F;stroke-width:1.2;stroke-dasharray:4 3}.gt{font:600 11px Archivo,Arial,sans-serif;fill:#B4372F}</style>
+        <defs><marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#0E0F12"/></marker></defs>
+        <rect class="b" x="10" y="10" width="150" height="34" rx="6"/><text class="t" x="85" y="32" text-anchor="middle">Ad spend</text>
+        <rect class="b" x="10" y="64" width="150" height="34" rx="6"/><text class="t" x="85" y="86" text-anchor="middle">Impressions</text>
+        <rect class="b" x="10" y="118" width="150" height="34" rx="6"/><text class="t" x="85" y="140" text-anchor="middle">Clicks</text>
+        <rect class="b" x="10" y="172" width="150" height="34" rx="6"/><text class="t" x="85" y="194" text-anchor="middle">Installs</text>
+        <rect class="b" x="10" y="226" width="150" height="34" rx="6"/><text class="t" x="85" y="248" text-anchor="middle">Players active on day 7</text>
+        <rect class="bh" x="10" y="280" width="150" height="40" rx="6"/><text class="th" x="85" y="305" text-anchor="middle">Day-7 ROAS (north star)</text>
+        <path class="l" d="M85 44 V62" marker-end="url(#ar)"/><path class="l" d="M85 98 V116" marker-end="url(#ar)"/><path class="l" d="M85 152 V170" marker-end="url(#ar)"/><path class="l" d="M85 206 V224" marker-end="url(#ar)"/><path class="l" d="M85 260 V278" marker-end="url(#ar)"/>
+        <text class="m" x="95" y="58">CPM</text><text class="m" x="95" y="112">CTR</text><text class="m" x="95" y="166">install rate</text><text class="m" x="95" y="220">D7 retention</text><text class="m" x="95" y="274">rev / player</text>
+        <rect class="lv" x="236" y="120" width="170" height="30" rx="15"/><text class="t" x="321" y="139" text-anchor="middle">Hook &amp; format insights</text>
+        <rect class="lv" x="236" y="174" width="170" height="30" rx="15"/><text class="t" x="321" y="193" text-anchor="middle">Element scorecard</text>
+        <rect class="lv" x="236" y="228" width="170" height="30" rx="15"/><text class="t" x="321" y="247" text-anchor="middle">Retention by element</text>
+        <path class="l" d="M236 135 H162" marker-end="url(#ar)"/><path class="l" d="M236 189 H162" marker-end="url(#ar)"/><path class="l" d="M236 243 H162" marker-end="url(#ar)"/>
+        <text class="m" x="236" y="110">FEATURE LEVERS</text>
+        <rect class="lv" x="236" y="285" width="170" height="30" rx="15"/><text class="t" x="321" y="304" text-anchor="middle">Early fatigue alert</text>
+        <path class="l" d="M236 300 H218 V27 H162" marker-end="url(#ar)"/><text class="m" x="224" y="22">catches wasted spend</text>
+        <rect class="g" x="422" y="120" width="128" height="138" rx="8"/><text class="gt" x="434" y="142">Guardrails</text>
+        <text class="t" x="434" y="166">Viewer skip rate</text><text class="t" x="434" y="188">Negative feedback</text><text class="t" x="434" y="210">Ad load</text><text class="t" x="434" y="232">Advertiser CPM</text>
+      </svg>
+      <figcaption class="mono">The feature works on click-through rate, install rate and day-7 retention, and catches wasted spend early. Guardrails protect the viewer experience.</figcaption>
+    </figure>
+    <dl class="dl">
+      <dt>North star</dt><dd>Advertisers' day-7 return on ad spend on app campaigns, which also drives how much they keep spending on TikTok.</dd>
+      <dt>Adoption</dt><dd>Share of app advertisers who open the insights weekly; how fast a worn-out ad is replaced.</dd>
+      <dt>Guardrails</dt><dd>Viewer skip rate and negative feedback, ad load, advertiser cost per 1,000 impressions.</dd>
+    </dl>
+
+    <h3 class="mono tt-h">05 · A/B test plan</h3>
+    <dl class="dl">
+      <dt>Who</dt><dd>App advertiser accounts above a spend threshold, randomised 50/50 by account and balanced by spend tier and vertical (games vs non-games).</dd>
+      <dt>Test</dt><dd>Treatment sees creative element insights and fatigue alerts; control sees today's reporting.</dd>
+      <dt>Measure</dt><dd>Primary: change in day-7 ROAS vs each account's pre-test baseline. Secondary: cost per install, creative refresh rate, spend retention.</dd>
+      <dt>Duration</dt><dd>6 weeks, to cover several creative refresh cycles; weeks 1–2 read separately to spot a novelty bump.</dd>
+      <dt>Decision</dt><dd>Launch if day-7 ROAS improves by at least 3% at 95% confidence and no guardrail worsens by more than 1%.</dd>
+      <dt>Risks</dt><dd>Treatment and control compete in the same auctions, so keep the test share small or split by market; analyse all assigned accounts, not only those who used the feature.</dd>
+    </dl>
+
+    <h3 class="mono tt-h">06 · Why this is my kind of problem</h3>
+    <ul class="finds">
+      <li>On RedNote I tested hooks and saw how much the first seconds decide completion: 12.1% of 19,000 views were watched to the end.</li>
+      <li>In the Heytea analysis, the channel with the most revenue (TikTok ads) wasn't the most efficient one (app push, email), which is why this proposal judges ads on day-7 ROAS, not installs.</li>
+      <li>At L'Oréal I measure promotions on before-and-after sell-out, the same habit as judging an ad on what happens after the click.</li>
+    </ul>
+    <p class="tt-src mono">Sources on today's tools: <a href="https://ppc.land/tiktok-just-made-its-smart-automation-actually-usable-for-advertisers/" target="_blank" rel="noopener">Smart+ Auto-select</a> · <a href="https://ads.tiktok.com/help/article/top-ads" target="_blank" rel="noopener">Top Ads</a> · <a href="https://segwise.ai/blog/tiktok-top-ads-dashboard-guide" target="_blank" rel="noopener">Key Frame Analysis</a> · <a href="https://segwise.ai/blog/tiktok-dashboard-best-practices-kpis-creative-metrics" target="_blank" rel="noopener">reporting limits</a></p>`,
+   skills:["Product teardown","Metric tree","A/B test design","Ads measurement"]},
+  {id:"loreal", t:"L'Oréal: trade marketing in action", org:"L'Oréal Singapore · Dermatological Beauty Division", when:"Jul 2026 – Jan 2027", cardOrg:"L'Oréal Singapore", roles:["commercial","analytics","digital"], status:"ready", v:"blue", big:"8", bl:"in-store activations, end-to-end",
+   d:"Trade marketing for CeraVe and La Roche-Posay across Watsons, Guardian and Unity: planning promotions, getting displays into stores, and measuring what worked.",
+   findings:[
+     "Ran 8 in-store activations end-to-end, from point-of-sale material (POSM) planning to agency and merchandiser coordination on set-up day.",
+     "Planned display and POSM placement for every promotional cycle across 3 retail partners.",
+     "Analysed sell-out before, during and after each promotion to measure uplift and shape the next activation plan.",
+     "Supported brand presence at events such as the L'Oréal Dermatological Beauty booth at Firsta."
+   ],
+   note:"Add your promo uplift method in 3 steps (no real numbers), and links to the Watsons/Guardian videos with up to 10,000 views.",
+   galleryTitle:"From the field", gallery:[["lo-4988.webp","CeraVe Skin Barrier Lab","tall"],["lo-4979.webp","CeraVe ceramide sunscreen launch stage","tall"],["lo-6227.webp","Guardian activation","tall"],["lo-6229.webp","La Roche-Posay and CeraVe at a Guardian activation","tall"],["lo-8319.webp","CeraVe body care display","tall"],["lo-8360.webp","CeraVe in-store counter","tall"],["lo-5301.webp","CeraVe × La Roche-Posay promotion display","tall"],["lo-5549.webp","Watsons storefront display","tall"],["lo-firsta.webp","Booth at Firsta, shared on CeraVe SG's Instagram","tall"]]},
+  {id:"peachy", t:"Peachy Bum: marketing strategy for a local diaper brand", org:"NUS Marketing Strategy Project · Team of 5", when:"Sep–Nov 2025", cardOrg:"NUS · Team of 5", roles:["analytics","digital"], status:"ready", v:"white", big:"2,271", bl:"parent responses analysed",
+   d:"A full marketing strategy for Peachy Bum, a Singapore baby-care brand competing with Pampers, Huggies and newer premium brands. I was content lead.",
+   findings:[
+     "Field research at Mummys Market, a baby-care trade fair, talking to mothers, competitors and service providers.",
+     "Analysed 2,271 parent responses on diaper brands used and likes and dislikes: \"no leaks\" and \"no rashes\" are now basic expectations, not reasons to choose a brand.",
+     "Built 3 parent segments and a persona, then repositioned Peachy Bum as Singapore's own baby-care brand, made for the humid climate.",
+     "Mapped the customer journey from newborn to preschool, with acquisition, expansion and retention touchpoints.",
+     "Estimated customer lifetime value at about S$2,224 per newborn parent to size marketing investment, then planned campaigns and budgets."
+   ],
+   galleryTitle:"From the deck", gallery:[["peachy-slide-02.webp","The brand story"],["peachy-slide-11.webp","What 2,271 parents told us"],["peachy-slide-13.webp","Three parent segments"],["peachy-slide-14.webp","Positioning statement"],["peachy-slide-16.webp","Touchpoints across the journey"],["peachy-slide-17.webp","Customer lifetime value"],["peachy-slide-22.webp","Campaign: Peachy Tales"],["peachy-slide-34.webp","Expected impact"]]},
+  {id:"web", t:"E-commerce website revamp: mockups and agency brief", org:"Rachelle and the Rabbit Distillery", when:"2026", roles:["digital","product"], status:"ready", v:"blue", big:"3", bl:"live brand sites",
+   d:"After the brand refresh from Compendium Spirits to Rachelle the Rabbit, the e-commerce site was rebuilt to match the new identity, improve navigation and lift mobile conversion. I was the link between the marketing team and our web agency.",
+   findings:[
+     "Turned what the team needed into simple mockups and briefs for the agency, and followed through on feedback and fixes.",
+     "Critiqued the old site page by page: hidden key info, a fake button, a cart page that pushed people back to shopping instead of checkout.",
+     "Used keyword and trend research to steer page names and content, e.g. using \"workshop\" instead of \"experience\".",
+     "Mapped the user journey and sitemap, from wireframes to a Shop All page with filters and a mobile layout.",
+     "Tested the buying flow end-to-end, from add to cart through checkout."
+   ],
+   links:[["https://www.rachelletherabbit.com/home","Rachelle the Rabbit"],["https://www.cojubunnies.sg/home","Coju Bunnies"],["https://www.lat0.sg/home","LAT 0"]],
+   galleryTitle:"From the revamp deck", gallery:[["rtr-slide-06.webp","Old site critique: homepage"],["rtr-slide-16.webp","Old site critique: cart page"],["rtr-slide-23.webp","Keywords to focus on"],["rtr-slide-33.webp","User journey"],["rtr-slide-34.webp","Sitemap"],["rtr-slide-37.webp","Wireframes"],["rtr-slide-38.webp","New homepage"],["rtr-slide-46.webp","Shop All with filters"],["rtr-slide-49.webp","Mobile adaptation"]]},
+  {id:"rabbit", t:"Campaigns and Meta ads for a spirits brand", org:"Rachelle and the Rabbit Distillery", when:"Jan–May 2026", roles:["digital"], status:"ready", v:"dark", big:"~20%", bl:"visibility & engagement",
+   d:"Campaigns, product launches and events for Rachelle the Rabbit and its brands Coju Bunnies and LAT 0, run across Instagram, LinkedIn, RedNote and Meta ads, with weekly paid and organic reporting.",
+   findings:[
+     "LAT 0 Cocktail Competition at Mondrian Singapore Duxton (25 March 2026): event promotion for the brand's bartender competition.",
+     "Retail promotion with Food Folks at Lau Pa Sat: a buy-two gift offer plus a free 100ml bottle for tagging the brands on Instagram, to turn buyers into social reach.",
+     "Planned Meta ad placements and posting across 3 platforms and 2 brand accounts, contributing to about 20% growth in visibility and engagement."
+   ],
+   links:[["https://www.rachelletherabbit.com/home","Rachelle the Rabbit"],["https://www.cojubunnies.sg/home","Coju Bunnies"],["https://www.lat0.sg/home","LAT 0"]],
+   gallery:[["rtr-lat0-cocktail.webp","LAT 0 Cocktail Competition poster","tall"],["rtr-buy2.webp","Buy any 2 bottles promotion with Food Folks","tall"]]},
+  {id:"bluefocus", t:"Livestreams and content for a Beijing agency", org:"BlueFocus Communication Group · Luban cross-border ads", when:"May–Aug 2024", cardOrg:"BlueFocus · Luban", roles:["digital"], status:"ready", v:"white", big:"1,012", bl:"viewers on one livestream",
+   d:"Livestreams and content for Luban (鲁班跨境通), BlueFocus's cross-border advertising service, teaching sellers how to advertise on Facebook, Google, TikTok and Pinterest.",
+   findings:[
+     "Ran live broadcasts 3+ times a week with OBS Studio, coordinating speakers and guests from platforms such as Pinterest.",
+     "Livestream replays reached 319 to 1,012 viewers each on WeChat Channels.",
+     "Designed posters and video covers in Canva for each livestream, reaching 2,600+ community members weekly.",
+     "Published 20+ posts a week on TikTok and Zhihu, reviewing content metrics daily to refine copy."
+   ],
+   gallery:[["bf-poster-pinterest.webp","Poster: Pinterest multi-market ads livestream","tall"],["bf-poster-facebook.webp","Poster: Facebook app ads livestream","tall"],["bf-live-1.webp","Live: weekly Q&A on ad services"],["bf-live-2.webp","Live: building Advantage+ shopping campaigns (1,012 viewers)"],["bf-live-3.webp","Live: Facebook & Google strategy for COD sellers"]]},
+];
+const LABEL = {product:"Product", analytics:"Analytics", commercial:"Trade", digital:"Digital"};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pad = n => String(n).padStart(2,'0');
+
+const world = document.getElementById('world'), stage = document.getElementById('stage');
+world.innerHTML = WORK.map((w,i) => `
+  <button class="card v-${w.v} ${w.status}" type="button" data-i="${i}" aria-label="${esc(w.t)}">
+    <span class="top"><span>${pad(i+1)} / ${w.roles.map(r=>LABEL[r]).join(' · ')}</span></span>
+    <span class="big">${esc(w.big)}</span>
+    <span class="bl">${esc(w.bl)}</span>
+    <span class="t">${esc(w.t)}</span>
+    <span class="foot"><span>${esc(w.cardOrg||w.org)}</span>${w.status==='todo'?'<span class="st">In progress</span>':''}</span>
+  </button>`).join('');
+const cards = [...world.children];
+
+let mode = innerWidth < 700 ? 'flat' : 'ring', filt = 'all', rot = 0, drag = null, hover = false;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const recruiter = () => document.body.classList.contains('recruiter');
+const visible = () => cards.filter(c => { const w = WORK[c.dataset.i]; return (filt==='all'||w.roles.includes(filt)) && !(recruiter() && w.status==='todo'); });
+
+function dims(){ const cs = getComputedStyle(document.documentElement); return [parseFloat(cs.getPropertyValue('--cw')), parseFloat(cs.getPropertyValue('--ch'))]; }
+
+function layout(){
+  const vis = visible(), n = vis.length, W = stage.clientWidth, [cw,ch] = dims(), gap = 18;
+  cards.forEach(c => c.classList.toggle('off', !vis.includes(c)));
+  stage.classList.toggle('ring', mode==='ring');
+  if(mode==='ring'){
+    const step = 360/Math.max(n,1), R = Math.max(260, (cw+22)*n/(2*Math.PI));
+    const s = Math.min(1, (W*.92)/(2*R+cw));
+    vis.forEach((c,i) => c.style.transform = `rotateY(${i*step}deg) translateZ(${R}px)`);
+    world.style.transform = `translateY(${-ch*s*.1}px) scale(${s}) rotateX(-6deg) rotateY(${rot}deg)`;
+    stage.style.height = Math.max(340, Math.round(ch*s*2.2)) + 'px';
+  } else {
+    const cols = Math.max(1, Math.floor((W+gap)/(cw+gap)));
+    const rows = Math.ceil(n/cols);
+    vis.forEach((c,i) => {
+      const col = i%cols, row = Math.floor(i/cols);
+      const x = (col-(cols-1)/2)*(cw+gap), y = (row-(rows-1)/2)*(ch+gap);
+      c.style.transform = `translate3d(${x}px,${y}px,0)`;
+    });
+    {
+      world.style.transform = 'none';
+      stage.style.height = rows*(ch+gap) + 40 + 'px';
+    }
+  }
+  document.getElementById('hint').textContent = mode==='ring' ? 'Drag to rotate · click a card to open it' : 'Click a card to open it';
+  updateCounter();
+}
+function updateCounter(){
+  const n = visible().length;
+  if(mode==='ring' && n){ const step=360/n; const f=((Math.round(-rot/step)%n)+n)%n; document.getElementById('counter').textContent = `${pad(f+1)} — ${pad(n)}`; }
+  else document.getElementById('counter').textContent = `${pad(Math.min(1,n))} — ${pad(n)}`;
+}
+function setMode(m){
+  mode = m;
+  document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode===m)));
+  layout();
+}
+function counts(){
+  document.querySelectorAll('.chip').forEach(b => {
+    const f = b.dataset.filter;
+    b.querySelector('.n').textContent = WORK.filter(w => (f==='all'||w.roles.includes(f)) && !(recruiter() && w.status==='todo')).length;
+  });
+}
+document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+document.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => {
+  filt = b.dataset.filter; rot = 0;
+  document.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', String(x===b)));
+  layout();
+}));
+document.getElementById('draftBtn')?.addEventListener('click', e => {
+  const on = document.body.classList.toggle('recruiter');
+  e.currentTarget.setAttribute('aria-pressed', String(on));
+  e.currentTarget.textContent = on ? 'Recruiter view · show unfinished' : 'Draft view · hide unfinished';
+  counts(); layout();
+});
+
+// ring: drag + slow spin
+let moved = 0;
+stage.addEventListener('pointerdown', e => { if(mode!=='ring') return; drag = {x:e.clientX, r:rot}; moved = 0; stage.classList.add('dragging'); world.classList.add('live'); });
+addEventListener('pointermove', e => { if(!drag) return; const dx = e.clientX-drag.x; moved = Math.abs(dx); rot = drag.r + dx*.25; layout(); });
+addEventListener('pointerup', () => { if(!drag) return; drag = null; stage.classList.remove('dragging'); });
+stage.addEventListener('pointerenter', () => hover = true);
+stage.addEventListener('pointerleave', () => hover = false);
+function tick(){
+  if(mode==='ring' && !drag && !hover && !reduce && !document.querySelector('dialog[open]')){
+    world.classList.add('live'); rot -= .06; layout();
+  }
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+cards.forEach(c => {
+  c.addEventListener('focus', () => { if(mode!=='ring') return; const vis = visible(); const i = vis.indexOf(c); if(i<0) return; world.classList.remove('live'); rot = -i*360/vis.length; layout(); });
+  c.addEventListener('click', e => { if(moved > 5){ moved = 0; e.preventDefault(); return; } openWork(+c.dataset.i); });
+});
+addEventListener('resize', layout);
+
+// panels
+function show(id){
+  document.querySelectorAll('dialog[open]').forEach(d => d.close());
+  const d = document.getElementById(id);
+  try { d.showModal(); } catch(e){ d.setAttribute('open',''); }
+}
+function openWork(i){
+  const w = WORK[i];
+  document.getElementById('work-k').textContent = `Work ${pad(i+1)} / ${pad(WORK.length)}`;
+  const funnel = w.rednote ? `
+    <div class="funnel" aria-label="Funnel, bars to scale">
+      ${[["Views",19000],["Completed views",2296],["Engagements",778],["Follows",198]].map(([k,v]) =>
+        `<div class="r"><span>${k}</span><span class="tr"><span class="bb" style="width:calc((100% - 70px) * ${v/19000})"></span><b>${v.toLocaleString('en-US')}</b></span></div>`).join('')}
+    </div>
+    <dl class="dl">
+      <dt>Context</dt><dd>A new student account about campus life and applications, with quantitative targets set for the project.</dd>
+      <dt>What I did</dt><dd>Defined the concept, audience and creative direction; ran ideation, scripting, filming, interview outreach, editing and publishing.</dd>
+      <dt>Analysis</dt><dd>Tracked the view-to-follow funnel, traffic sources and demographics to find where viewers dropped off.</dd>
+      <dt>Result</dt><dd>19,000 views, 2,296 completed views (12.1%), 778 engagements and 198 follows (1.0% of views) in 2 weeks.</dd>
+    </dl>
+    <h3 class="mono" style="margin:22px 0 6px;color:var(--muted)">What we learned</h3>
+    <p style="margin:0 0 6px">Digital marketing is an iterative loop, not a one-off campaign: test a hypothesis, read the metrics, adjust in real time.</p>
+    <ul class="finds">
+      <li>Curiosity and relatability capture attention in the first seconds.</li>
+      <li>Authentic storytelling builds trust and keeps people engaged.</li>
+      <li>Simple edits such as clear subtitles help comprehension; too many visual effects blur the message.</li>
+      <li>Platform algorithms reward engagement quality over quantity, which matters for long-term reach.</li>
+    </ul>` : '';
+  document.getElementById('work-body').innerHTML = `
+    <div class="detail-big">${esc(w.big)}</div>
+    <div class="mono" style="color:var(--muted);margin:6px 0 18px">${esc(w.bl)}</div>
+    <h2 id="work-h">${esc(w.t)}</h2>
+    <p class="lede">${esc(w.org)}${w.when?' · '+esc(w.when):''}</p>
+    <p>${esc(w.d)}</p>
+    ${w.links?`<h3 class="mono" style="margin:22px 0 6px;color:var(--muted)">Live sites</h3><div style="display:flex;gap:8px;flex-wrap:wrap">${w.links.map(([u,t])=>`<a class="go" style="margin-top:0" href="${esc(u)}" target="_blank" rel="noopener">${esc(t)} ↗</a>`).join('')}</div>`:''}
+    ${funnel}
+    ${w.html||''}
+    ${w.findings?`<h3 class="mono" style="margin:22px 0 6px;color:var(--muted)">${w.code?'Key findings':'What I did'}</h3><ul class="finds">${w.findings.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:''}
+    ${w.code?`<h3 class="mono" style="margin:22px 0 6px;color:var(--muted)">Sample query</h3><pre class="code"><code>${esc(w.code)}</code></pre>`:''}
+    ${w.sqlAll?`<details class="sqlall"><summary class="go">View all the SQL queries</summary><div class="sqlbar"><span class="mono">SQLite · 30+ queries · customers, products, stores, campaigns</span><button class="copy" type="button" data-copysql>Copy</button></div><pre class="code tall"><code>${esc(document.getElementById('sql-src').textContent.trim())}</code></pre></details>`:''}
+    ${w.skills?`<div class="kv">${w.skills.map(k=>`<span class="hl">${esc(k)}</span>`).join('')}</div>`:''}
+    ${w.gallery?`<h3 class="mono" style="margin:22px 0 8px;color:var(--muted)">${w.galleryTitle||"Work samples"}</h3><div class="gallery">${w.gallery.map(([src,cap,k])=>`<figure class="${k||''}"><img src="${src}" alt="${esc(cap)}" loading="lazy"><figcaption class="mono">${esc(cap)}</figcaption></figure>`).join('')}</div>`:''}
+    <div class="kv">${w.roles.map(r=>`<span>${LABEL[r]}</span>`).join('')}</div>
+    ${w.link?`<a class="go" href="${esc(w.link)}" target="_blank" rel="noopener">${esc(w.linkText||'Open')} →</a>`:''}
+    ${w.note?`<div class="todo-box">${w.status==='todo'?'In progress. ':''}${esc(w.note)}</div>`:''}`;
+  show('work');
+  history.replaceState(null,'','#'+w.id);
+}
+document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => { show(b.dataset.open); history.replaceState(null,'','#'+b.dataset.open); }));
+document.querySelectorAll('dialog.sheet, dialog.pop').forEach(d => {
+  d.querySelector('[data-close]').addEventListener('click', () => d.close());
+  d.addEventListener('click', e => { if(e.target === d) d.close(); });
+  d.addEventListener('close', () => history.replaceState(null,'',location.pathname+location.search));
+});
+function fromHash(){
+  const h = location.hash.slice(1); if(!h) return;
+  if(['intro','education','experience','skills','contact'].includes(h)) return show(h);
+  const i = WORK.findIndex(w => w.id===h); if(i>=0) openWork(i);
+}
+addEventListener('hashchange', fromHash);
+
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-copysql]'); if(!b) return;
+  try { await navigator.clipboard.writeText(document.getElementById('sql-src').textContent.trim()); b.textContent = 'Copied'; }
+  catch(err){ b.textContent = 'Select to copy'; }
+  setTimeout(() => b.textContent = 'Copy', 1800);
+});
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; } catch(e){ b.textContent = 'Select to copy'; }
+  setTimeout(() => b.textContent = 'Copy', 1800);
+}));
+
+// Eyes follow the pointer; on touch screens they follow the scroll and wander when idle.
+(function(){
+  const face = document.getElementById('face'), head = document.getElementById('head'), iris = document.getElementById('iris');
+  let tx = 0, ty = 0, cx = 0, cy = 0, last = 0, hasPointer = false;
+  function aim(px, py){
+    const r = face.getBoundingClientRect();
+    const ex = r.left + r.width*.36, ey = r.top + r.height*.53;
+    const dx = px - ex, dy = py - ey, d = Math.max(1, Math.hypot(dx, dy));
+    const k = Math.min(1, d/320);
+    tx = dx/d*k; ty = dy/d*k; last = performance.now();
+  }
+  addEventListener('pointermove', e => { if(e.pointerType==='mouse'){ hasPointer = true; aim(e.clientX, e.clientY); } });
+  addEventListener('scroll', () => { if(!hasPointer){ const y = Math.min(1, scrollY/400); tx = 0; ty = y; last = performance.now(); } }, {passive:true});
+  function frame(t){
+    if(!reduce){
+      if(t - last > 2600){ tx = Math.sin(t/1700)*.7; ty = Math.sin(t/2300)*.4; }
+      cx += (tx-cx)*.12; cy += (ty-cy)*.12;
+      head.style.transform = `rotateY(${cx*5}deg) rotateX(${-cy*4}deg) translateZ(0)`;
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  face.addEventListener('click', () => { show('intro'); history.replaceState(null,'','#intro'); });
+  document.getElementById('toWork').addEventListener('click', () => {
+    document.getElementById('intro').close();
+    document.getElementById('works').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+  });
+})();
+
+counts(); setMode(mode); fromHash();
+</script>
+</body>
+</html>
